@@ -8,7 +8,7 @@ scenarios:
     steps:
     - podAction:
         matches:
-          - namespace: "openshift-.*"
+          - namespace: "default"
         filters:
           - property:
              name: "state"
