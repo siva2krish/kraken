@@ -20,7 +20,7 @@ kraken_config: "{{ lookup('env', 'KRAKEN_CONFIG')|default('/var/lib/jenkins/krak
 kraken_repository: "{{ lookup('env', 'KRAKEN_REPOSITORY')|default('https://github.com/openshift-scale/kraken.git', true) }}"
 
 # scenarios to inject
-scenarios_folder_path: "{{ lookup('env', 'SCENARIOS_FOLDER_PATH')|default('/scenarios/', true) }}"
+scenarios_folder_path: "{{ lookup('env', 'SCENARIOS_FOLDER_PATH')|default('CI/scenarios/', true) }}"
 scenarios: "{{ lookup('env', 'SCENARIOS')|default('[[scenarios/regex_openshift_pod_kill.yml] }}"
 
 exit_on_failure: "{{ lookup('env', 'EXIT_ON_FAILURE')|default(false, true) }}"
