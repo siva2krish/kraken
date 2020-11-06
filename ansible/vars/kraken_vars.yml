@@ -26,7 +26,7 @@ scenarios: "{{ lookup('env', 'SCENARIOS')|default('[[scenarios/regex_openshift_p
 exit_on_failure: "{{ lookup('env', 'EXIT_ON_FAILURE')|default(false, true) }}"
 
 # Cerberus enabled by user 
-cerberus_enabled: "{{ lookup('env', 'CERBERUS_ENABLED')|defaulttrue, true) }}"
+cerberus_enabled: "{{ lookup('env', 'CERBERUS_ENABLED')|default(true, true) }}"
 cerberus_url: http://52.224.144.215:8080
 
 # Kraken configurations
