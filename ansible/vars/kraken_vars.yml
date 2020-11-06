@@ -21,9 +21,7 @@ kraken_repository: "{{ lookup('env', 'KRAKEN_REPOSITORY')|default('https://githu
 
 # scenarios to inject
 scenarios_folder_path: "{{ lookup('env', 'SCENARIOS_FOLDER_PATH')|default('/scenarios/', true) }}"
-scenarios: "{{ lookup('env', 'SCENARIOS')|default('[[scenarios/regex_openshift_pod_kill.yml, scenarios/post_action_regex.py]]', true) }}"
-
-exit_on_failure: "{{ lookup('env', 'EXIT_ON_FAILURE')|default(false, true) }}"
+scenarios: "{{ lookup('env', 'SCENARIOS')|default('scenarios/regex_openshift_pod_kill.yml', true) }}"
 
 
 # Cerberus enabled by user 
