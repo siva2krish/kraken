@@ -1,10 +1,10 @@
 ###############################################################################
 # Ansible SSH variables.
 ###############################################################################
-ansible_public_key_file: "{{ lookup('env', 'PUBLIC_KEY')|default('~/.ssh/id_rsa.pub', true) }}"
-ansible_private_key_file: "{{ lookup('env', 'PRIVATE_KEY')|default('~/.ssh/id_rsa', true) }}"
+#ansible_public_key_file: "{{ lookup('env', 'PUBLIC_KEY')|default('~/.ssh/id_rsa.pub', true) }}"
+#ansible_private_key_file: "{{ lookup('env', 'PRIVATE_KEY')|default('~/.ssh/id_rsa', true) }}"
 
-orchestration_user: "{{ lookup('env', 'ORCHESTRATION_USER')|default('root', true) }}"
+#orchestration_user: "{{ lookup('env', 'ORCHESTRATION_USER')|default('jenkins', true) }}"
 ###############################################################################
 
 # kube config location
@@ -17,11 +17,11 @@ kraken_dir: "{{ lookup('env', 'KRAKEN_DIR')|default('/var/lib/jenkins/kraken', t
 kraken_config: "{{ lookup('env', 'KRAKEN_CONFIG')|default('/var/lib/jenkins/kraken/config/config.yaml', true) }}"
 
 # kraken repository location
-kraken_repository: "{{ lookup('env', 'KRAKEN_REPOSITORY')|default('https://github.com/siva2krish/kraken.git', true) }}"
+kraken_repository: "{{ lookup('env', 'KRAKEN_REPOSITORY')|default('https://github.com/openshift-scale/kraken.git', true) }}"
 
 # scenarios to inject
 scenarios_folder_path: "{{ lookup('env', 'SCENARIOS_FOLDER_PATH')|default('CI/scenarios/', true) }}"
-scenarios: "{{ lookup('env', 'SCENARIOS')|default('[[/var/lib/jenkins/kraken/scenarios/regex_openshift_pod_kill.yml]', true) }}"
+scenarios: "{{ lookup('env', 'SCENARIOS')|default('[[scenarios/regex_openshift_pod_kill.yml] }}"
 
 exit_on_failure: "{{ lookup('env', 'EXIT_ON_FAILURE')|default(false, true) }}"
 
