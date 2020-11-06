@@ -28,9 +28,9 @@ exit_on_failure: "{{ lookup('env', 'EXIT_ON_FAILURE')|default(false, true) }}"
 
 # Cerberus enabled by user 
 cerberus_enabled: "{{ lookup('env', 'CERBERUS_ENABLED')|default(true) }}"
-cerberus_url: "{{ lookup('env', 'CERBERUS_URL')|default('', true) }}"
+cerberus_url: "{{ lookup('env', 'CERBERUS_URL')|default('true', true) }}"
 
 # Kraken configurations
 wait_duration: "{{ lookup('env', 'WAIT_DURATION')|default(60, true) }}"
 iterations: "{{ lookup('env', 'ITERATIONS')|default(1, true) }}"
-daemon_mode: "{{ lookup('env', 'DAEMON_MODE')|default(false, true) }}"
+daemon_mode: "{{ lookup('env', 'DAEMON_MODE')|default(true, true) }}"
