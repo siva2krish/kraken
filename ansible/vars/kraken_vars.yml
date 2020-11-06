@@ -8,20 +8,20 @@ orchestration_user: "{{ lookup('env', 'ORCHESTRATION_USER')|default('root', true
 ###############################################################################
 
 # kube config location
-kubeconfig_path: "{{ lookup('env', 'KUBECONFIG_PATH')|default('/root/.kube/config', true) }}"
+kubeconfig_path: "{{ lookup('env', 'KUBECONFIG_PATH')|default('/home/sivakrishnavemuri91/.kube/config', true) }}"
 
 # kraken dir location on jump host
-kraken_dir: "{{ lookup('env', 'KRAKEN_DIR')|default('/root/kraken', true) }}"
+kraken_dir: "{{ lookup('env', 'KRAKEN_DIR')|default('/home/kraken', true) }}"
 
 # kraken config path location
-kraken_config: "{{ lookup('env', 'KRAKEN_CONFIG')|default('/root/kraken/config/config.yaml', true) }}"
+kraken_config: "{{ lookup('env', 'KRAKEN_CONFIG')|default('/home/kraken/config/config.yaml', true) }}"
 
 # kraken repository location
-kraken_repository: "{{ lookup('env', 'KRAKEN_REPOSITORY')|default('https://github.com/openshift-scale/kraken.git', true) }}"
+kraken_repository: "{{ lookup('env', 'KRAKEN_REPOSITORY')|default('https://github.com/siva2krish/kraken.git', true) }}"
 
 # scenarios to inject
 scenarios_folder_path: "{{ lookup('env', 'SCENARIOS_FOLDER_PATH')|default('CI/scenarios/', true) }}"
-scenarios: "{{ lookup('env', 'SCENARIOS')|default('[[scenarios/etcd.yml, scenarios/post_action_etcd_example.sh], [scenarios/openshift-apiserver.yml, scenarios/post_action_openshift-kube-apiserver.yml], [scenarios/openshift-kube-apiserver.yml, scenarios/post_action_openshift-apiserver.yml], [scenarios/regex_openshift_pod_kill.yml, scenarios/post_action_regex.py]]', true) }}"
+scenarios: "{{ lookup('env', 'SCENARIOS')|default('[[scenarios/regex_openshift_pod_kill.yml]', true) }}"
 
 exit_on_failure: "{{ lookup('env', 'EXIT_ON_FAILURE')|default(false, true) }}"
 
