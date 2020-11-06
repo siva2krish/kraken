@@ -24,6 +24,7 @@ scenarios_folder_path: "{{ lookup('env', 'SCENARIOS_FOLDER_PATH')|default('/scen
 scenarios: "{{ lookup('env', 'SCENARIOS')|default('scenarios/regex_openshift_pod_kill.yml', true) }}"
 
 
+
 # Cerberus enabled by user 
 cerberus_enabled: "{{ lookup('env', 'CERBERUS_ENABLED')|default(true, true) }}"
 cerberus_url: http://52.224.144.215:8080
