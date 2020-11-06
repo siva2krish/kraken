@@ -8,7 +8,7 @@
 ###############################################################################
 
 # kube config location
-kubeconfig_path: "{{ lookup('env', 'KUBECONFIG_PATH')|default('/home/sivakrishnavemuri91/.kube/config', true) }}"
+kubeconfig_path: "{{ lookup('env', 'KUBECONFIG_PATH')|default('/var/lib/jenkins/.kube/config', true) }}"
 
 # kraken dir location on jump host
 kraken_dir: "{{ lookup('env', 'KRAKEN_DIR')|default('/var/lib/jenkins/kraken', true) }}"
