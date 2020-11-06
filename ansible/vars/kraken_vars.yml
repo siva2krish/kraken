@@ -21,8 +21,21 @@ kraken_repository: "{{ lookup('env', 'KRAKEN_REPOSITORY')|default('https://githu
 
 # scenarios to inject
 # scenarios to inject
-scenarios_folder_path: "{{ lookup('env', 'SCENARIOS_FOLDER_PATH')|default('/var/lib/jenkins/kraken/scenarios/', true) }}"
-scenarios: "{{ lookup('env', 'SCENARIOS')|default('[[scenarios/regex_openshift_pod_kill.yml]]', true) }}"
+# scenarios to inject
+scenarios_folder_path: "{{ lookup('env', 'SCENARIOS_FOLDER_PATH')|default('/scenarios/', true) }}"
+scenarios: "{{ lookup('env', 'SCENARIOS')|default('[[scenarios/etcd.yml, scenarios/post_action_etcd_example.sh], [scenarios/openshift-apiserver.yml, scenarios/post_action_openshift-kube-apiserver.yml], [scenarios/openshift-kube-apiserver.yml, scenarios/post_action_openshift-apiserver.yml], [scenarios/regex_openshift_pod_kill.yml, scenarios/post_action_regex.py]]', true) }}"
+
+exit_on_failure: "{{ lookup('env', 'EXIT_ON_FAILURE')|default(false, true) }}"
+
+# Cerberus enabled by user 
+cerberus_enabled: "{{ lookup('env', 'CERBERUS_ENABLED')|default(false, true) }}"
+cerberus_url: "{{ lookup('env', 'CERBERUS_URL')|default('', true) }}"
+
+# Kraken configurations
+wait_duration: "{{ lookup('env', 'WAIT_DURATION')|default(60, true) }}"
+iterations: "{{ lookup('env', 'ITERATIONS')|default(1, true) }}"
+daemon_mode: "{{ lookup('env', 'DAEMON_MODE')|default(false, true) }}"
+
 
 exit_on_failure: "{{ lookup('env', 'EXIT_ON_FAILURE')|default(false, true) }}"
 
