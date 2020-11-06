@@ -29,7 +29,7 @@ exit_on_failure: "{{ lookup('env', 'EXIT_ON_FAILURE')|default(false, true) }}"
 
 # Cerberus enabled by user 
 cerberus_enabled: "{{ lookup('env', 'CERBERUS_ENABLED')|default(true) }}"
-cerberus_url: "{{ lookup('env', 'CERBERUS_URL')|default((http://52.224.144.215:8080) }}"
+cerberus_url: "{{ lookup('env', 'CERBERUS_URL')|default((52.224.144.215:8080) }}"
 
 # Kraken configurations
 wait_duration: "{{ lookup('env', 'WAIT_DURATION')|default(60, true) }}"
@@ -41,7 +41,7 @@ exit_on_failure: "{{ lookup('env', 'EXIT_ON_FAILURE')|default(false, true) }}"
 
 # Cerberus enabled by user 
 cerberus_enabled: "{{ lookup('env', 'CERBERUS_ENABLED')|default(true) }}"
-cerberus_url: "{{ lookup('env', 'CERBERUS_URL')|default((http://52.224.144.215:8080) }}"
+cerberus_url: "{{ lookup('env', 'CERBERUS_URL')|default((52.224.144.215:8080) }}"
 
 # Kraken configurations
 wait_duration: "{{ lookup('env', 'WAIT_DURATION')|default(60, true) }}"
@@ -53,7 +53,7 @@ exit_on_failure: "{{ lookup('env', 'EXIT_ON_FAILURE')|default(false, true) }}"
 
 # Cerberus enabled by user 
 cerberus_enabled: "{{ lookup('env', 'CERBERUS_ENABLED')|default(true) }}"
-cerberus_url: "{{ lookup('env', 'CERBERUS_URL')|default((http://52.224.144.215:8080) }}"
+cerberus_url: "{{ lookup('env', 'CERBERUS_URL')|default(52.224.144.215:8080) }}"
 
 # Kraken configurations
 wait_duration: "{{ lookup('env', 'WAIT_DURATION')|default(60, true) }}"
