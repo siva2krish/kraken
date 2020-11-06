@@ -1,5 +1,5 @@
 kraken:
-    kubeconfig_path: /home/sivakrishnavemuri91/.kube/config                    # Path to kubeconfig
+    kubeconfig_path: /var/lib/jenkins/.kube/config                    # Path to kubeconfig
     exit_on_failure: False                                 # Exit when a post action scenario fails
     chaos_scenarios:                                         # List of policies/chaos scenarios to load
         -   pod_scenarios:                                 # List of chaos pod scenarios to load
