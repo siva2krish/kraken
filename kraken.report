@@ -1,0 +1,11 @@
+2020-11-09 05:01:41,990 [INFO] Starting kraken
+2020-11-09 05:01:41,998 [INFO] Initializing client to talk to the Kubernetes cluster
+2020-11-09 05:01:42,189 [INFO] Fetching cluster info
+2020-11-09 05:01:43,917 [INFO] 
+error: the server doesn't have a resource type "clusterversion"
+Kubernetes master is running at https://192.168.99.102:8443
+
+2020-11-09 05:01:43,917 [INFO] Daemon mode not enabled, will run through 1 iterations
+
+2020-11-09 05:01:43,917 [INFO] Executing scenarios for iteration 0
+2020-11-09 05:01:43,918 [INFO] 
