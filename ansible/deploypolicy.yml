@@ -15,11 +15,11 @@
         url: http://52.224.144.215:8082/repository/chaostest/demoorganisation/testprojectart1/pod/post_action_regex_openshift_pod_kill.yml
         url_password: hcl@12345@2019
         url_username: admin
-        dest: /tmp/secure.yml
+        dest: /home/sivakrishnavemuri91/workspace/kraken-demo1/policy/post_action_regex_openshift_pod_kill.yml
 
     - name: Display the File contents
       shell: >
-         cat /tmp/secure.yml
+         cat /home/sivakrishnavemuri91/workspace/kraken-demo1/policy/post_action_regex_openshift_pod_kill.yml
       register: shellout
 
     - name: "INFO: Display the File Contents"
