@@ -1,0 +1,23 @@
+### ansible-playbook test.yml --extra-vars scenarios=post_action_regex_openshift_pod_kill.yml ###
+
+- hosts: localhost
+  connection: local
+  max_fail_percentage: 0
+  tasks:
+   - name: Create service directory
+     file:
+       dest: /home/sivakrishnavemuri91/workspace/kraken-demo1/policy
+       state: directory
+
+
+   - name: Generating Kraken config file
+     template:
+       src: /home/sivakrishnavemuri91/kraken/kraken/ansible/templates/kraken.j2
+       dest: "/home/sivakrishnavemuri91/workspace/kraken-demo1/config.yml"
+     run_once: true
+   - name: Start injecting failures
+     shell: |
+       scenarios/
+       unset CONFIG
+       python3 run_kraken.py
+     ignore_errors: yes
