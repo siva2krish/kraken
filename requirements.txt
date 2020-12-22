@@ -3,3 +3,4 @@ pyfiglet
 git+https://github.com/powerfulseal/powerfulseal.git
 requests
 boto3
+google-auth
